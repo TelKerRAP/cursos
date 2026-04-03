@@ -4,101 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cursos Online Pro</title>
-<meta name="description" content="Aprende con nuestros cursos online de Marketing, Diseño, Programación y más. Compra por WhatsApp fácilmente.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --primary-color: #38bdf8;
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
-  --btn-color: #25d366;
-  --btn-hover: #1ebe55;
-  --text-color: #fff;
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
-  padding-bottom: 100px; /* espacio para footer */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:white;
 }
 
 /* HEADER */
-header {
-  text-align: center;
-  padding: 40px 20px;
+header{
+  text-align:center;
+  padding:40px 20px;
 }
-header h1 {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-}
-
-/* SECTION */
-section.courses {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-section.courses h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: var(--primary-color);
+header h1{
+  font-size:2.5rem;
+  color:#38bdf8;
 }
 
 /* GRID */
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+.container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
 }
 
 /* CARD */
-.card {
-  background: var(--card-bg);
-  border-radius: 15px;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.card{
+  background:#1e293b;
+  border-radius:15px;
+  padding:20px;
+  transition:.3s;
 }
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(0,0,0,.5);
 }
-.card h3 {
-  color: var(--primary-color);
+
+.card h3{
+  color:#38bdf8;
 }
-.card p {
-  margin: 10px 0;
+
+.card p{
+  margin:10px 0;
 }
 
 /* BOTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: var(--btn-color);
-  color: var(--text-color);
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-.btn:hover, .btn:focus {
-  background: var(--btn-hover);
-  outline: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  width: 100%;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  backdrop-filter: blur(5px);
-  position: relative; /* para que no tape contenido */
-  bottom: 0;
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
 }
 </style>
 </head>
@@ -109,48 +72,166 @@ footer {
   <h1>🎓 Cursos Online</h1>
 </header>
 
-<main>
-  <section class="courses">
-    <h2>Nuestros Cursos</h2>
-    <div class="container" id="courses-container">
-      <!-- Los cursos se generarán aquí -->
-    </div>
-  </section>
-</main>
+<div class="container">
 
-<footer>
-  © Aprendizaje Auto-Didacta ®
-</footer>
-
-<script>
-const cursos = [
-  { nombre: 'Marketing Digital', descripcion: 'Aprende a vender en internet desde cero.' },
-  { nombre: 'Diseño Gráfico', descripcion: 'Crea diseños profesionales para redes sociales.' },
-  { nombre: 'Programación Web', descripcion: 'Aprende HTML, CSS y JavaScript.' },
-  { nombre: 'Ventas', descripcion: 'Domina técnicas de cierre de ventas.' },
-  { nombre: 'Inteligencia Artificial', descripcion: 'Aprende a usar IA para negocios.' },
-  { nombre: 'Fotografía', descripcion: 'Domina la fotografía profesional.' },
-  { nombre: 'Edición de Video', descripcion: 'Aprende a crear videos impresionantes.' },
-  { nombre: 'Redes Sociales', descripcion: 'Gestiona y crece tu comunidad online.' },
-  { nombre: 'SEO y Marketing', descripcion: 'Posiciona tus páginas web en Google.' },
-  { nombre: 'Productividad', descripcion: 'Optimiza tu tiempo y proyectos.' }
-];
-
-const container = document.getElementById('courses-container');
-
-cursos.forEach(curso => {
-  const card = document.createElement('div');
-  card.className = 'card';
-  card.innerHTML = `
-    <h3>${curso.nombre}</h3>
-    <p>${curso.descripcion}</p>
-    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del Curso ${encodeURIComponent(curso.nombre)}" target="_blank" rel="noopener noreferrer">
+  <!-- CURSO 1 -->
+  <div class="card">
+    <h3>AWS Certified Solutions Architect - Associate (SAA-C03)</h3>
+    <p>Tipo: Certificación Cloud / Arquitectura en la nube</p>
+    <ul>
+      <li>Aprende a diseñar soluciones escalables en AWS.</li>
+      <li>Cobertura de servicios como EC2, S3, RDS, VPC, IAM, Lambda.</li>
+      <li>Preparación para el examen oficial SAA-C03.</li>
+      <li>Incluye ejemplos prácticos de arquitectura y buenas prácticas.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del AWS Certified Solutions Architect" target="_blank">
       📲 Comprar por WhatsApp
     </a>
-  `;
-  container.appendChild(card);
-});
-</script>
+  </div>
+
+  <!-- CURSO 2 -->
+  <div class="card">
+    <h3>Android hacking para principiantes</h3>
+    <p>Tipo: Seguridad / Hacking ético</p>
+    <ul>
+      <li>Introducción a la seguridad en Android.</li>
+      <li>Aprender ataques comunes y vulnerabilidades.</li>
+      <li>Configuración de entornos de pruebas.</li>
+      <li>Ideal para principiantes en ciberseguridad móvil.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Android Hacking Principiantes" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 3 -->
+  <div class="card">
+    <h3>Android Hacking - Curso Avanzado</h3>
+    <p>Tipo: Seguridad avanzada / Hacking móvil</p>
+    <ul>
+      <li>Profundización en exploits, ingeniería inversa y debugging.</li>
+      <li>Uso de herramientas avanzadas para auditorías de seguridad.</li>
+      <li>Desarrollo de scripts y pruebas de penetración.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Android Hacking Avanzado" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 4 -->
+  <div class="card">
+    <h3>Construye un AI Chatboy con WhatsApp API, ChatGPT y Python</h3>
+    <p>Tipo: Programación / Inteligencia Artificial</p>
+    <ul>
+      <li>Crear un bot conversacional para WhatsApp usando Python.</li>
+      <li>Integración con ChatGPT o API de IA.</li>
+      <li>Automatización de respuestas y tareas.</li>
+      <li>Explicación del flujo de mensajes y webhooks.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso AI Chatboy" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 5 -->
+  <div class="card">
+    <h3>Cras-RAT (Videos)</h3>
+    <p>Tipo: Seguridad / Malware / Remote Access Tool</p>
+    <ul>
+      <li>Aprende sobre herramientas de control remoto y pruebas de penetración.</li>
+      <li>Videos demostrativos del uso de RATs.</li>
+      <li>Consideraciones éticas y legales del uso de malware para pruebas.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Cras-RAT" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 6 -->
+  <div class="card">
+    <h3>Curso Completo: Perplexity AI: Cero-Avanzado</h3>
+    <p>Tipo: Inteligencia Artificial / Aprendizaje de IA</p>
+    <ul>
+      <li>Desde fundamentos de IA hasta aplicaciones avanzadas.</li>
+      <li>Entrenamiento de modelos y comprensión de algoritmos.</li>
+      <li>Integración de IA en proyectos prácticos.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Perplexity AI" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 7 -->
+  <div class="card">
+    <h3>HACKING DE RADIO-FRECUENCIAS [SAVITAR]</h3>
+    <p>Tipo: Ciberseguridad / RF Hacking</p>
+    <ul>
+      <li>Introducción a sistemas de comunicación inalámbrica.</li>
+      <li>Pruebas de seguridad en radios, WiFi y dispositivos IoT.</li>
+      <li>Uso de herramientas para capturar y analizar señales.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso RF Hacking" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 8 -->
+  <div class="card">
+    <h3>Microsoft Project</h3>
+    <p>Tipo: Gestión de proyectos / Software</p>
+    <ul>
+      <li>Planificación, seguimiento y gestión de proyectos.</li>
+      <li>Uso de diagramas de Gantt, asignación de recursos y reportes.</li>
+      <li>Ideal para project managers o planificación empresarial.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Microsoft Project" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 9 -->
+  <div class="card">
+    <h3>OFIMATICA EN GENERAL</h3>
+    <p>Tipo: Productividad / Software</p>
+    <ul>
+      <li>Dominio de herramientas de oficina como Word, Excel, PowerPoint.</li>
+      <li>Creación de documentos, hojas de cálculo y presentaciones profesionales.</li>
+      <li>Trucos y buenas prácticas para eficiencia.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Ofimática" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+  <!-- CURSO 10 -->
+  <div class="card">
+    <h3>POSTMAN - MASTERCLASS</h3>
+    <p>Tipo: Desarrollo / APIs</p>
+    <ul>
+      <li>Aprende a crear, probar y automatizar APIs con Postman.</li>
+      <li>Manejo de colecciones, variables y entornos.</li>
+      <li>Ideal para desarrolladores backend o frontend que trabajen con APIs.</li>
+    </ul>
+    <a class="btn" href="https://wa.me/5213222373809?text=Hola quiero info del curso Postman" target="_blank">
+      📲 Comprar por WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<footer style="
+  text-align:center;
+  padding:20px;
+  width:100%;
+  position:fixed;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,0.7);
+  color:white;
+  backdrop-filter: blur(5px);
+">
+  © Aprendizaje Auto-Didacta ®
+</footer>
 
 </body>
 </html>
